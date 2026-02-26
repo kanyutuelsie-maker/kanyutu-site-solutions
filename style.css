@@ -1,0 +1,238 @@
+/*style.css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+.header-container{
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+}
+.navbar{
+    display: flex;/* horizontal layout*/
+    justify-content: space-between;/*logo on left, nav+button right*/
+    align-items: center;/*vertically align items*/
+    flex-wrap:nowrap;
+    padding: 0.5rem 2rem;
+}
+/*logo container*/
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0px;/*space between K image and text*/
+    margin: 0;
+}
+/*K image*/
+.logo img{
+    width:auto;
+    height:50px;/*small professional logo size*/
+    margin: 0;
+}
+/*logo text*/
+.logo-text{
+    display: flex;
+    flex-direction: column;
+        line-height:0.5;
+}
+.logo-text .KANYUTU{
+    font-size: 30px;
+    font-weight: bold;
+    color: #1e40af;/*blue color for KANYUTU*/
+    font-family:'Montserrat', sans-serif;
+    line-height: 1;
+}
+.logo-text .SITE SOLUTIONS{
+    font-size: 14px;
+    color: #6b7280;/*gray color for SITE SOLUTIONS*/
+    margin-top: -5px;/*move up closer to KANYUTU*/
+    font-family:'Montserrat', sans-serif;
+} 
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 15px;/*space between nav links and button*/
+}
+/*make nav links horizontal*/
+.nav-links{
+    display: flex;/*horizontal row*/
+    align-items:center ;/*vertically center with logo*/
+    gap: 15px;/*space between links*/
+    flex-shrink: 0;/*prevent shrinking on small screens*/
+    margin-left: 3rem;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0;
+}
+.quote-btn{
+    background-color: #e11d48;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 20px;
+    white-space: nowrap;/*prevent button text from wrapping*/
+}
+.hero{
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;/*full viewport height*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+     position: relative;
+     flex-direction: column;
+}
+.hero-buttons{
+    display: flex;
+    gap: 50px;/*space between buttons*/
+    justify-content: center;
+}
+.hero-btn{
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+.hero-content{
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    z-index: 2;
+    position: relative;
+}
+.hero-content p{
+    margin-bottom: 20px;
+}
+
+.primary-button{
+    background-color: #e11d48;
+}
+.secondary-button{
+    background-color: #e11d48;
+}
+body{
+    background-color: #0f172a;
+    color: white;
+    line-height: 1.6;
+    padding: 20px;
+}
+a{
+    color: #ef4444;
+    text-decoration: none;
+}a:hover{
+    text-decoration: underline;
+}
+h1{
+    color:# black ;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+h3{
+    color: #facc15;
+    margin-bottom: 10px;
+}
+ul{
+    list-style: none;
+    margin-left: 0;
+}
+li{
+    margin-bottom: 10px;
+    list-style: disc;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#about-us{
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+#about-us h2{
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+#about-us p{
+    font-size: 1.1rem;
+    color: #555;
+    line-height:1.6 ;
+    margin: 0 auto;
+    max-width: 600px;
+}
+#services{
+    padding: 60px 20px;
+    background-color: grey;
+    text-align: center;
+}
+#services h3{
+    font-size:2rem;
+    margin-bottom:  20px;
+    color: #333;
+}
+.service-card{
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius:10px ;
+    width: 250px;
+    box-shadow: 0 4px 4px;
+    transition: transform 0.2 ease;
+}
+.service-card:hover{
+    transform: translateY(-5px);
+}
+.service-card h4{
+    color: #e63946;
+    margin-bottom: 15px;
+}
+.service-card p{
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.services-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+@media screen (max-width: 768px){
+    .services-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .service-card{
+        width: 100%;
+    }
+}
+footer{
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.social-icons{
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
