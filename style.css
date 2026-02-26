@@ -9,6 +9,11 @@
     padding: 20px 0;
     border-bottom: 2px solid #ddd;
 }
+nav,.hero-content{
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 .navbar{
     display: flex;/* horizontal layout*/
     justify-content: space-between;/*logo on left, nav+button right*/
@@ -94,6 +99,16 @@
     display: flex;
     gap: 50px;/*space between buttons*/
     justify-content: center;
+}
+.hero-buttons a{
+    display: inline-block;
+    margin:5px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
 }
 .hero-btn{
     padding: 8px 18px;
@@ -235,4 +250,16 @@ footer{
     display: flex;
     gap: 15px;
     margin-left: auto;
+}
+@media (max-width: 768px) {
+    .hero-content, nav {
+        padding: 0 10px;  /* add small padding on sides */
+        text-align: center;  /* center content on small screens */
+    }
+
+    .hero-buttons a {
+        display: block;  /* stack buttons vertically */
+        width: 100%;     /* fill available space */
+        margin-bottom: 10px;
+    }
 }
