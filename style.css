@@ -17,9 +17,12 @@ nav,.hero-content{
 .navbar{
     display: flex;/* horizontal layout*/
     justify-content: space-between;/*logo on left, nav+button right*/
-    align-items: center;/*vertically align items*/
+    align-items: center;/*vertically center items*/
     flex-wrap:nowrap;
-    padding: 0.5rem 2rem;
+    padding:10px 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
 }
 /*logo container*/
 .logo{
@@ -251,15 +254,29 @@ footer{
     gap: 15px;
     margin-left: auto;
 }
-@media (max-width: 768px) {
-    .hero-content, nav {
-        padding: 0 10px;  /* add small padding on sides */
-        text-align: center;  /* center content on small screens */
+@media (max-width: 600px) {
+    nav a {
+        font-size: 0.8rem;     /* smaller text on phones */
+        margin: 0 5px;         /* reduce spacing */
     }
 
+    nav button {
+        font-size: 0.8rem;     /* shrink button text */
+        padding: 5px 10px;     /* shrink button size */
+    }
+    
     .hero-buttons a {
-        display: block;  /* stack buttons vertically */
-        width: 100%;     /* fill available space */
-        margin-bottom: 10px;
+        display: inline-block;  /* keep buttons side by side */
+        margin: 5px 10px;       /* small spacing between buttons */
+        font-size: 0.9rem;      /* shrink button text on small screens */
+        padding: 8px 12px;      /* smaller buttons */
+    }
+
+    h1 {
+        font-size: 1.8rem;      /* scale heading down for phones */
+    }
+
+    p {
+        font-size: 1rem;        /* scale paragraph down */
     }
 }
